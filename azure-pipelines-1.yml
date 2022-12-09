@@ -24,3 +24,9 @@ steps:
   inputs:
     containerRegistry: 'docker-service-connection'
     command: 'login'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'docker-service-connection'
+    repository: 'zen111 / azuredevops'
+    command: 'buildAndPush'
+    Dockerfile: '**/AzureDockerfile'
