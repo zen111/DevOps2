@@ -22,11 +22,11 @@ steps:
     goals: 'package'
 - task: Docker@2
   inputs:
-    containerRegistry: 'docker-service-connection'
+    containerRegistry: 'sv-docker'
     command: 'login'
 - task: Docker@2
   inputs:
-    containerRegistry: 'docker-service-connection'
+    containerRegistry: 'sv-docker'
     repository: 'zen111 / azuredevops'
     command: 'buildAndPush'
     Dockerfile: '**/AzureDockerfile'
